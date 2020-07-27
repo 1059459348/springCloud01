@@ -19,9 +19,8 @@ public class OrderContrller {
     private RestTemplate restTemplate;
 
     @GetMapping("/test")
-    public ResponseEntity<String> orderTest(@RequestParam String param) {
+    public String orderTest(@RequestParam String param) {
         System.out.println("Order前往调用User");
-        return restTemplate.getForEntity("localhost:8001/eureka/user/test?param="+param, String.class);
-        //  return orderService.order(param);
+          return orderService.order(param);
     }
 }

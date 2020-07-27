@@ -10,9 +10,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-@EnableEurekaClient   //声明是一个客户端  注册到注册中心
+//@EnableEurekaClient   //声明是一个客户端  注册到注册中心
 @EnableFeignClients
-@EnableDiscoveryClient
+@EnableDiscoveryClient     //可以被其他服务发现，并向注册中心注册自己
 public class UserApplication {
 
     public static void main(String[] args) {

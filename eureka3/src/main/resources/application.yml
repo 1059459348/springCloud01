@@ -1,0 +1,11 @@
+server:
+  port: 7003
+eureka:
+  instance:
+    hostname:  eureka7003
+  client:
+    register-with-eureka: false    #是否将自己注册到注册中心
+    fetch-registry:  false
+    #为true时，可以启动，但报异常：Cannot execute request on any known server
+    service-url:
+      defaultZone:  http://eureka7001:7001/eureka/,http://eureka7002:7002/eureka/
